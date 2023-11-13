@@ -25,13 +25,13 @@ const Header=()=>{
 }
 const RestaurantCard=(props)=>{
     //console.log(RestaurantsData);
-    const {resName,rating,estimatedTime,cuisine}=props;
+    const {resName,rating,estimatedTime,cuisine,imageSrcId}=props;
     return (
         <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
             <img
             className="res-logo"
             alt="restaurant-logo"
-            src="https://www.thechunkychef.com/wp-content/uploads/2014/12/Spicy-Thai-Noodles-5.jpg"
+            src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${imageSrcId}`}
             />
             <h3>{resName}</h3>
             <h4>{cuisine}</h4>
@@ -46,19 +46,16 @@ const Body=()=>{
          <div className="search">Search</div>
          <div className="res-container" >
             {
-           RestaurantsData && RestaurantsData.restaurants.map((restaurant,index)=>{
-                    console.log(restaurant.info);
-                    return <RestaurantCard resName={restaurant.info.name} 
+           RestaurantsData.restaurants.map((restaurant,index)=>(
+                     <RestaurantCard resName={restaurant.info.name} 
                     key={restaurant.info.id} 
                     cuisine={restaurant.info.cuisines.join(",")}
                     rating={restaurant.info.avgRating}
-                    estimatedTime={restaurant.info.sla.deliveryTime} />
-            })
-            }
-            {/*
-            <RestaurantCard resName="Oye kiddan" cuisine="Biryani, North Indian, Asian" rating="4 stars" estimatedTime="30 minutes"/>
-            <RestaurantCard resName="Burger King" cuisine="Burgers, Wraps" rating="4.5 stars" estimatedTime="10 minutes"/>
-            */}
+                    estimatedTime={restaurant.info.sla.deliveryTime}
+                    imageSrcId={restaurant.info.cloudinaryImageId} />
+            )
+            )
+           }
            
          </div>
      </div>
