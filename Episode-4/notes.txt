@@ -1,0 +1,66 @@
+What will you do when someone gives task to build an app?
+Firstly you will mock design that app.
+You will have to do planning.
+What is needed inside planning
+1. What you are going to build ?
+2. How the app is going to look Wireframe ,UI mock?
+
+our App component
+contains 3 parts
+Header
+Body 
+Footer
+
+An component is nothing but a js function returns JSX.
+
+A header component contains
+-Logo
+-Nav items
+
+Body component contains
+-Search
+-Restaurant container
+-Restaurant Card
+
+Footer
+-Copyright
+-Links
+-Address
+-Contact
+
+We are using restaurnat card a lot,
+so we will build a common restaurant card component to maintain re-usability.
+
+inline style in react 
+const styleObject={
+    backgroundColor:'yellow'
+}
+
+<component style={styleObject} />
+style={} means we are writing js inside curly braces
+
+Passing arguments to function is similar to passing props to a component
+const {prop1,prop2} = props //destructuring an Object
+
+Config-Driven UI 
+UI is based on configuration of the location,user and filters 
+controlling the ui using data and config that comes from backend.
+
+When writing production ready code  we have to write re-usable component
+
+Each child in the list should have unique key property warning
+-> but why it needs unique key
+-> so that react knows to identify each component uniquely to optimize rendering
+-> without that react will render list again and again after any new changes
+-> benefit of unique id is , it help react idenitify what is new and what is old item in list 
+-> so render cycles are less 
+
+why we should not use index as key
+because the order of items may change 
+[0,1,2,3,4,5]
+new list [0,1,2,3,4,5,6,7]
+
+using keys is good practice in react.
+
+unique key >>>>>>>>>>> index(it is last resort)
+

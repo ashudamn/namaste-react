@@ -1,4 +1,5 @@
 import restaurants from "../utils/mockRestaurantData";
+// this is a default export.
 import RestaurantCard from "./RestaurantCard";
 import {useState} from "react";
 const Body=()=>{

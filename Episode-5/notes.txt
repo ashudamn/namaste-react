@@ -1,0 +1,57 @@
+Everything that react can do , can be done by normal css java-script.
+Then why react :);
+UI library/framework helps in development and optimization.
+
+Place your files inside components folder and util folder.
+React never forces you to do this , you can have your own folder structure.
+You can use .js ans .jsx extension, hardly matters.
+
+While making different components, you have to make that component file
+Write the component structure and export the component/function
+Then you can import that function to use it in your app.js file or respective file.
+first export and then import 
+
+You should keep constants in a separate file.
+constants should have SNAKE_CASE format
+
+same with constant json, make separate file for that
+
+multiple export, default export-> there could be only one default export.
+named export to export multiple export.
+
+export default component
+import component from "path";
+
+export const name-some
+import {name-same} from "path";
+
+try to do both named and default export.
+
+One of the react super power is the UI layer and Data layer works with each other tightly.
+Updating DOM manipulation.
+
+State variable using hooks
+
+A react hook is normal js function, it comes with some utilities.
+Written by facebook functions.
+
+hooks
+useState()
+useEffect()
+--most important hooks
+
+import {useState} from "react"
+
+whenever a state variable changes , react re-rendering components
+
+const arr = useState(0);
+const [list,setList] = arr;// array destructuring
+go to react fibre and understand.
+
+
+
+
+
+
+
+

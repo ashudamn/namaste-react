@@ -1,4 +1,5 @@
 import { LOGO_URL } from "../utils/constants";
+// this is a named export
 
 const Header=()=>{
     return (

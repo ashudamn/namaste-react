@@ -1,0 +1,8 @@
+useEffect  is called after the render is completed.
+
+useEffect(()=>{
+    console.log('useEffect called');
+},[])
+
+fetch is given by JS engine of browser.
+
