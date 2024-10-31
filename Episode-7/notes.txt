@@ -1,0 +1,49 @@
+useEffect is called with two things dependency array and function to run
+
+useEffect called after every renders without any dependency array
+useEffect(()=>{
+    console.log("on every render");
+});
+
+If the dependency array is empty then useEffect is called on initial render 
+useEffect(()=>{
+    console.log("");
+},[]);
+
+If we have a dependency array then useEffect will be called on change of that dependency
+
+useEffect(()=>{
+    console.log("");
+},[urlResourceId]);
+
+
+useState 
+
+whenever use useState call it inside component body.
+Used for creating local state variables.
+Call it on top, as JS runs line by line.
+Do not create useState hooks inside if-else.
+XXXXXXX
+if(){
+    const [state,setState] = useState();
+}
+XXXXXXX
+ Do not create inside for loop;
+
+ No we are creating routes in the application.
+ we will use the library react-router-dom
+
+ First we have to import createBrowserRouter from react-router-dom
+ We have to create routing configuration in root level component 
+ in our case it is App.js 
+
+ Configuration is nothing but, what will happen on a specific route.
+
+ rafc in vs code to create component 
+
+ create error route in configuration in react-router-dom configuration.
+ 
+ Children routes for routes under App.js
+and Link route as anchor tag causes the page to refresh on visiting a new link with hyperlink
+
+Server side routing is when new html is loaded when visiting a particular route.
