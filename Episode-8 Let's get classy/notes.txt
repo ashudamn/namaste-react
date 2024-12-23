@@ -1,0 +1,99 @@
+Why do we use class based components ?
+class based components are older way of writing react.
+and many companies till now uses class based component for writing react.
+
+We can understand component life cycle in class based components.
+In many interview questions react is being asked.
+Understanding of react improves, like what were issues in older code while using it.
+
+class UserClass extends React.Component{--this react.component tells js that it is react component
+    render(){
+        /*returns some JSX which will be rendered on UI*/
+    }
+}
+
+React.Component this comes from React 
+The class will inherit some propertes of React.Component 
+
+ constructor(props){
+    super(props);
+    //we invoke super so that "this" knows about props of child component and it gets binded
+ }
+
+we have to write this line in constructor
+ this.state={count:0,count2:2};
+
+updating state
+//WRONG way
+this.state.count=this.state.count+1;
+
+//RIGHT way
+this.setState({count:this.state.count+1})
+
+//life cycle of react compinent in class based
+1. constructor
+2. Render method
+3. ComponentDidMount
+
+What will happen when there is a parent and child and what will be order of events?
+
+1. Parent constructor
+2. Parent render
+3. Child constructor
+4. Child Render
+5. Child ComponentDidMount
+6. Parent ComponentDidMount
+
+ComponenetDidMount is used to make API calls
+but why ?
+ComponentDIdMount means component is loaded qnd then we do API call, 
+and then fill the data
+
+What happens when we have two child components 
+
+Wrong order
+--parent constructor
+--parent render
+---child1 constructor
+---child1 render
+---child1 ComponentDidMount
+---child2 constructor
+---child2 render
+---child2 ComponentDidMount
+
+but what actually happens is
+
+RENDER PHASE
+Parent constructor
+About.js:14 Parent render
+UserClass.js:7 Child1 child constructor
+UserClass.js:13 Child1 child render
+UserClass.js:7 Child2 child constructor
+UserClass.js:13 Child2 child render
+
+<DOM updated in single batch>
+DOM manipulation begins
+and batching happens
+
+COMMIT-PHASE
+UserClass.js:10 Child1 child component did mount
+UserClass.js:10 Child2 child component did mount
+About.js:11 Parent componentDidMount
+
+why it happens is we have to see the react lifecycle diagram
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+in this diagram we see that we have two phases 
+Render phase and Commit phase 
+render phase involves manipulating virtual dom, till that constructor and render is called
+but in commit phase we have changing actual dom and that is a heavy operation, 
+so react optimises it and batch the render pahse operations and then call component did mount.
+
+
+useEffect and componentDidMount is not same
+think differently whe working with them.
+
+cleanup functions and there importance
+
+
