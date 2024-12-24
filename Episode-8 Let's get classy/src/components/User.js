@@ -7,9 +7,12 @@ const User = (props) =>{
     useEffect(()=>{
 
         //call api to get user info
-
+        let intervalId = setInterval(()=>{
+            console.log("user functional component logging");
+        },1000)
         return ()=>{
             //write cleanup code fro resources
+            clearInterval(intervalId);
         }
     },[])
     return <div className="user-card">

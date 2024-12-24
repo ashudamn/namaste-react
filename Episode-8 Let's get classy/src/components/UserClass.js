@@ -20,12 +20,17 @@ class UserClass extends React.Component{
         this.setState({
             userInfo:userJsonData
           });
+
+          this.intervalId = setInterval(()=>{
+            console.log('user class logging');
+          },1000);
     }
     componentDidUpdate(){
         console.log("component did update");
     }
     componentWillUnmount(){
         console.log("user class unmount");
+        clearInterval(this.intervalId);
     }
     render(){
         console.log(this.props.name+" child render")
