@@ -1,23 +1,21 @@
 {
-  "name": "episode-8",
+  "name": "episode-9",
   "version": "1.0.0",
-  "description": "Lets get classy",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "@parcel/watcher": "^2.5.0",
-    "@swc/core-darwin-arm64": "^1.10.1",
-    "lightningcss-darwin-arm64": "^1.28.2",
     "parcel": "^2.13.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.1"
   },
   "devDependencies": {
     "process": "^0.11.10"

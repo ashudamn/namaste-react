@@ -1,0 +1,30 @@
+Single responsibility priniciple
+->A component or class should perform single or limited group of functions
+Modularity of functionality
+Means you break down your code into small modules
+
+You code becomes distributable, maintainable, testable, and reusable.
+
+SRP-> there is now hard and fast rule to implement  that,
+ but the main idea is that other people should see and understand it(easy to read it).
+
+CustomHooks
+ We can create our own custom hooks 
+ hooks-> are nothing but utility function that we use to simplify our logic.
+ We can remove some common functionality from a component and extract it to common hook and reuse-it.
+
+ RestaurantMenu
+ 1. Calling api
+ 2. Showing data fetched from api
+
+ Calling api can be moved to a custom hook useRestaurantMenu(resId)
+
+ separate file-> separate hook
+
+ the convention is hooks name should be start with useHookName.js
+ the react knows that use keyword is used for hook.
+
+ Lazy loading using lazy and suspense functionality of react,
+ to breakdown big features into small chunks,
+ to make application  less heavy.
+
