@@ -1,0 +1,61 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo img{
+    width: 100px;
+}
+.nav-items > ul{
+display: flex;
+list-style-type: none;
+font-size: 25px;
+}
+.nav-items > ul > li{
+    margin: 10px;
+}
+.search{
+    padding: 10px;
+}
+.res-logo{
+    width: 100%;
+}
+.res-card{
+   margin: 10px;
+    width: 200px;
+    padding: 5px;
+    height: 28rem;
+}
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-container{
+    display: flex;
+    justify-content: right;
+}
+.header-container>div{
+    padding: 10px;
+}
+
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+}
+
+.user-card{
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.pure-veg{
+    position: absolute;
+    color: azure;
+    background-color: burlywood;
+}
