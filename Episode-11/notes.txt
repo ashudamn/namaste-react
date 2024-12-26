@@ -1,0 +1,12 @@
+HOC
+higher order component 
+- they are used to enhance a component and return enhanced component
+
+const withPromotedLabel = (RestaurantCard)=>{
+    return (props)=>{
+        return (<div>
+        <label>Promoted</label>
+        <RestaurantCard/>
+        </div>)
+    }
+}

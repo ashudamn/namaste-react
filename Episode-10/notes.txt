@@ -1,0 +1,19 @@
+THis episode is all about styling the react application
+various things to see in class
+SCSS
+SASS
+tailwind.class
+styled components
+
+various ui library to explore like 
+material ui 
+chakra ui 
+ant design
+bootstrap 
+
+we will work with tailwind css
+setup tailwind using documentation of adding tailwind in a parcel project.
+
+
+
+
