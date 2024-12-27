@@ -1,7 +1,7 @@
 import RestaurantCard, { withVegRestaurantHoc } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 
-export default RestaurantsContainer = (props) => {
+const RestaurantsContainer = (props) => {
   const { restaurantList } = props;
   const RestaurantWithPureVeg= withVegRestaurantHoc(RestaurantCard);
   return (
@@ -17,3 +17,5 @@ export default RestaurantsContainer = (props) => {
     </>
   );
 };
+
+export default RestaurantsContainer;

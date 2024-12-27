@@ -1,12 +1,12 @@
 import React , {lazy,Suspense}from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Body from "./Body";
 import Header from "./Header";
 import Footer from "./Footer";
 import RestaurantMenu from "./RestaurantMenu.js";
 import Error from "./Error.js";
 
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
     return (
